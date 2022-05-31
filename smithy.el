@@ -2,21 +2,26 @@
 
 ;; Copyright (C) 2022 Matt Nemitz
 
+;; Version: 0.1.0
 ;; Author: Matt Nemitz <matt.nemitz@gmail.com>
-;; Version: 1.0
+;; Maintainer: Matt Nemitz <matt.nemitz@gmail.com>
+;; URL: http://github.com/mnemitz/smithy-mode
 ;; Keywords: tools, languages, smithy, IDL, amazon
+;; Package-Requires: ((emacs "26.1"))
+
+;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; This package provides a major mode for editing Smithy IDL files
-;; Currently only supports basic syntax highlighting
+;; Provides font-lock for the Smithy IDL (https://awslabs.github.io/smithy/)
+;; In the future this may be extended to more functionality,
+;; subject to progress on the Smithy Language Server implementation (https://github.com/awslabs/smithy-language-server)
 
 ;;; Code:
 
 ;; We leverage the C syntax table to get strings, comments, parentheses and braces
 ;; matching and highlighting properly
 (require 'cc-langs)
-
 
 (defvar smithy-highlights
       (let* (
@@ -42,7 +47,7 @@
              (x-traits-regexp "@\\w+\\(\\.\\w+\\)*\\(#\\w+\\)?")
              (x-types-regexp (regexp-opt x-types 'words))
              (x-node-keywords-regexp (regexp-opt x-node-keywords 'words))
-             (x-control-statement-regexp "$version:")
+             (x-control-statement-regexp "$\\w+:")
              (x-simple-type-names-regexp (regexp-opt x-simple-type-names'words)))
 
         `(
@@ -68,8 +73,7 @@
   :syntax-table smithy-syntax-table
   (setq comment-start "// ")
   (setq comment-end "")
-  (when (>= emacs-major-version 26.1)
-    (display-line-numbers-mode))
+  (display-line-numbers-mode)
   (setq font-lock-defaults '(smithy-highlights)))
 
 
