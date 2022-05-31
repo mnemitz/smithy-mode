@@ -68,7 +68,7 @@
     (modify-syntax-entry ?- ". 12b" table)
     table))
 
-(define-derived-mode smithy-mode fundamental-mode "smithy"
+(define-derived-mode smithy-mode fundamental-mode "smithy-mode"
   "major mode for editing smithy code."
   :syntax-table smithy-syntax-table
   (setq comment-start "// ")
