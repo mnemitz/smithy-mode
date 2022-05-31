@@ -1,4 +1,4 @@
-;;; smithy.el --- Major mode for editing Smithy IDL files
+;;; smithy-mode.el --- Major mode for editing Smithy IDL files
 
 ;; Copyright (C) 2022 Matt Nemitz
 
@@ -80,4 +80,4 @@
 
 (provide 'smithy)
 
-;;; smithy.el ends here
+;;; smithy-mode.el ends here
