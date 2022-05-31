@@ -76,6 +76,7 @@
   (display-line-numbers-mode)
   (setq font-lock-defaults '(smithy-highlights)))
 
+(add-to-list 'auto-mode-alist '("\\.smithy\\'" . smithy-mode))
 
 (provide 'smithy)
 
