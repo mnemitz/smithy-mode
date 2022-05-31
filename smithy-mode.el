@@ -78,6 +78,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.smithy\\'" . smithy-mode))
 
-(provide 'smithy)
+(provide 'smithy-mode)
 
 ;;; smithy-mode.el ends here
