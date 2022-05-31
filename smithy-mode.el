@@ -68,6 +68,7 @@
     (modify-syntax-entry ?- ". 12b" table)
     table))
 
+;;;###autoload
 (define-derived-mode smithy-mode fundamental-mode "smithy-mode"
   "major mode for editing smithy code."
   :syntax-table smithy-syntax-table
@@ -76,6 +77,7 @@
   (display-line-numbers-mode)
   (setq font-lock-defaults '(smithy-highlights)))
 
+;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.smithy\\'" . smithy-mode))
 
 (provide 'smithy-mode)
