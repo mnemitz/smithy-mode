@@ -69,8 +69,8 @@
     table))
 
 ;;;###autoload
-(define-derived-mode smithy-mode fundamental-mode "smithy-mode"
-  "major mode for editing smithy code."
+(define-derived-mode smithy-mode fundamental-mode "Smithy"
+  "Major mode for editing smithy IDL files."
   :syntax-table smithy-syntax-table
   (setq comment-start "// ")
   (setq comment-end "")
