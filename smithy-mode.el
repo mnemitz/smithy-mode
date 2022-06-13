@@ -2,7 +2,7 @@
 
 ;;; Copyright (C) 2022 Matt Nemitz
 
-;;; Version: 0.1.1
+;;; Version: 0.1.2
 ;;; Author: Matt Nemitz <matt.nemitz@gmail.com>
 ;;; Maintainer: Matt Nemitz <matt.nemitz@gmail.com>
 ;;; URL: http://github.com/mnemitz/smithy-mode
