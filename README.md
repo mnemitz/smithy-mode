@@ -16,3 +16,13 @@ M-x package-refresh-contents<RET>
 
 M-x package-install<RET>smithy-mode<RET>
 ```
+
+On DOOM Emacs
+
+```emacs-lisp
+;;; ~/.doom.d/packages.el
+
+(package! smithy-mode)
+```
+
+If you encounter any issues installing with DOOM, you may need to refresh your MELPA recipes.
